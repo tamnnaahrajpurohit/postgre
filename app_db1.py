@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Company Dashboard (Olist) — Postgres v3", layout="wide")
 
 # ---------- DB config ----------
-DEFAULT_DB = "ostgresql://postgres:1234@db.hzyzqmyabfqagcxdwjti.supabase.co:5432/postgres"
+DEFAULT_DB = "postgresql://postgres:1234@db.hzyzqmyabfqagcxdwjti.supabase.co:5432/postgres"
 DB_URL = os.getenv("DATABASE_URL", DEFAULT_DB).strip()
 
 # cache_resource preferred for non-picklable objects (SQLAlchemy Engine)
@@ -829,3 +829,4 @@ with st.expander("Show all 25 visuals (full):"):
 
 st.markdown("---")
 st.caption("Tip: Use the sidebar filters (date, channel, warehouse, category) to drill down. Charts update with filters.")
+
